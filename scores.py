@@ -1,7 +1,5 @@
 import numpy as np
 
-
-
 def score_extroversion(answer_scores):
     return 20 + answer_scores['0'] - answer_scores['5'] + answer_scores['10'] - answer_scores['15'] + answer_scores['20'] - answer_scores['25'] + answer_scores['30'] - answer_scores['35'] + answer_scores['40'] - answer_scores['45']
 
