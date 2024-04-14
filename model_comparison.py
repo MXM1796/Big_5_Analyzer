@@ -2,9 +2,14 @@ from txtai.pipeline import LLM
 from txtai.pipeline import Textractor
 import torch
 
-# To do
+def metric_1():
+    pass
 
+def metric_2():
+    pass
 
+def metric_3():
+    pass
 
 
 # Create LLM
