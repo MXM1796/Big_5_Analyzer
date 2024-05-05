@@ -1,18 +1,19 @@
-Question: Answer : Context
-"I Am the life of the party"::
+Statements: Answer : Context
+"I Am the life of the party":
 :Disagree: "I'm not a fan of large crowds and loud music. I prefer spending time with a few close friends and relaxing in a quieter environment."
 :Slightly disagree: "While I enjoy going to parties and hanging out with friends, I don't always feel like the absolute center of attention. I enjoy soaking up the atmosphere, but I'm not necessarily the one who lifts the mood."
 :Neutral: "I enjoy going to parties and meeting new people, but I wouldn't necessarily say I'm the life of the party. Sometimes I'm chatty and active, but other times I'm more reserved and observant."
 :Slightly agree: "I often feel comfortable leading conversations in a group and livening up the mood at a party. I may not always be the absolute highlight, but I definitely contribute to everyone having a good time."
 :Agree: "I love being at parties and feeling the energy of the people around me. I'm usually the one cracking jokes, cranking up the music, and getting people to dance. I would definitely say I'm the life of the party."
-"I Feel little concern for others."::
+
+"I Feel little concern for others.":
 :Disagree: "I care deeply about the well-being of others and often go out of my way to help them. Their happiness and welfare are important to me."
 :Slightly disagree: "While I do prioritize my own needs at times, I still have empathy for others and try to consider their feelings. I may not always express it overtly, but I do care."
 :Neutral: "I try to balance my concern for others with taking care of myself. Sometimes I'm more focused on my own goals, but I still try to be mindful of how my actions affect those around me."
 :Slightly agree: "I'm generally focused on my own tasks and responsibilities, but I do have some concern for others. I may not always show it outwardly, but I do care about their well-being."
 :Agree: "I tend to prioritize my own needs and goals over others'. While I'm not completely indifferent to their concerns, I generally have little concern for others compared to myself."
 
-"I Am always prepared."::
+"I Am always prepared.":
 :Disagree: "I often find myself improvising and adapting to situations as they arise. While I try to plan ahead when I can, I'm comfortable handling the unexpected."
 :Slightly disagree: "I make an effort to prepare for important events or tasks, but I'm not always fully organized or ready for every situation. I do my best to stay on top of things."
 :Neutral: "I believe in being prepared, but I also understand that it's not always possible to anticipate every outcome. I try to strike a balance between planning ahead and being flexible."

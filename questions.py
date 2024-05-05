@@ -3,7 +3,7 @@ import pandas as pd
 
 def benchmark_questions(question_amount_from_top):
 
-    df = pd.read_csv("big_five_questions.txt", sep=",", usecols=[0])
+    df = pd.read_csv("big_five_statements.txt", sep=",", usecols=[0])
 
     question = [row[0] for col, row in df.iterrows()]
 

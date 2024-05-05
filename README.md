@@ -12,10 +12,12 @@ Analyzing texts and generate big 5 scores trough answers of txtai LLM
 
 
 ## Metriken
-- response precision
-- response variance
+- response precision 
+- response accuracy 
 - speed of single response
 - speed of several responses
+
+
 
 ## Models to test
 source: https://huggingface.co/models?pipeline_tag=question-answering&sort=downloads
@@ -26,4 +28,13 @@ source: https://huggingface.co/models?pipeline_tag=question-answering&sort=downl
 4. https://huggingface.co/google-bert/bert-large-uncased-whole-word-masking-finetuned-squad
 5. https://huggingface.co/distilbert/distilbert-base-cased-distilled-squad (transfered)
 
+## Important Sources
 
+
+Scoring Sheet: https://sites.temple.edu/rtassessment/files/2018/10/Table_BFPT.pdf
+
+    1. Extraversion
+    2. Agreeableness
+    3. Conscientiousness
+    4. Neuroticism
+    5. Openness to Experience
