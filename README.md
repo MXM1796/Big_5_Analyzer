@@ -38,3 +38,6 @@ Scoring Sheet: https://sites.temple.edu/rtassessment/files/2018/10/Table_BFPT.pd
     3. Conscientiousness
     4. Neuroticism
     5. Openness to Experience
+
+Tutorial: Build Your First Question Answering System 
+https://haystack.deepset.ai/tutorials/01_basic_qa_pipeline
