@@ -1,0 +1,29 @@
+openness_100:
+Transparency, Accessibility, Inclusivity, Sharing, Freedom, Communication, Collaboration, Openness, Honesty, Welcoming
+
+openness_0:
+Secrecy, Isolation, Exclusion, Restriction, Censorship, Concealment, Barriers, Closed, Privacy, Guarded
+
+consciousness_100:
+Awareness, Mindfulness, Attention, Vigilance, Perception, Presence, Conscientiousness, Self-awareness, Cognition, Insight
+
+consciousness_0:
+Unawareness, Negligence, Oblivion, Ignorance, Inattention, Unconsciousness, Forgetfulness, Mindlessness, Insensibility, Blindness
+
+extraversion_100:
+Outgoing, Sociable, Energetic, Talkative, Gregarious, Lively, Expressive, Bold, Adventurous, Friendly
+
+extraversion_0:
+Introverted, Reserved, Quiet, Shy, Solitary, Withdrawn, Reclusive, Timid, Reticent, Unsociable
+
+agreeableness_100:
+Friendly, Kind, Compassionate, Cooperative, Warm, Trusting, Altruistic, Considerate, Affectionate, Empathetic
+
+agreeableness_0:
+Hostile, Unfriendly, Aloof, Uncooperative, Cold, Distrustful, Selfish, Inconsiderate, Unkind, Insensitive
+
+neuroticism_100:
+Anxious, Moody, Irritable, Emotional, Insecure, Nervous, High-strung, Fearful, Tense, Worried
+
+neuroticism_0:
+Calm, Stable, Relaxed, Unemotional, Secure, Confident, Resilient, Serene, Content, Untroubled

@@ -1,14 +1,22 @@
-import scores
-import random
+import numpy as np
 
+def read_keywords_from_file(file_path):
+    with open(file_path, 'r') as file:
+        lines = file.readlines()
 
-my_dict = {}
+    keywords_dict = {}
+    current_key = None
 
-for key in range(50):
-    my_dict[str(key)] = random.randint(1,5)
+    for line in lines:
+        line = line.strip()
+        if line.endswith(':'):
+            current_key = line[:-1]
+            keywords_dict[current_key] = []
+        elif current_key:
+            keywords_dict[current_key].extend(line.split(', '))
 
-my_scores = scores.calculate_big5_scores(my_dict)
+    return {key: np.array(value) for key, value in keywords_dict.items()}
 
-print(my_scores)
-
-
+# Reading keywords from the file
+file_path = 'keywords.txt'
+keywords = read_keywords_from_file(file_path)
