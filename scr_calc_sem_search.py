@@ -14,7 +14,7 @@ embeddings = Embeddings({
 })
 
 # Load test data from a CSV file
-test_csv = pd.read_csv('../test2.csv', header=0, index_col=False, usecols=[1])
+test_csv = pd.read_csv('test2.csv', header=0, index_col=False, usecols=[1])
 
 # Reset the DataFrame index
 test_csv.reset_index(inplace=True)
