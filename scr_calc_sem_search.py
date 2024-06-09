@@ -8,6 +8,7 @@ import numpy as np
 import os
 import matplotlib.pyplot as plt
 
+
 # Initialize txtai Embeddings with a pre-configured model
 embeddings = Embeddings({
     'path': "sentence-transformers/all-MiniLM-L6-v2"
@@ -28,36 +29,7 @@ txtai_data = [(count, sent, None) for count, sent in enumerate(data)]
 # Index data with txtai
 embeddings.index(txtai_data)
 
-# Define word lists for different personality traits
-word_arr_openess = ["travel", "exploring", "world", "new", "open", "experience", "curious"]
-word_arr_concs = ["organized", "carefully", "planed", "effective", "responsible", "reliable", "deliberate"]
-word_arr_extrv = ["sociable", "activ", "chatty", "warmly", "optimistic", "serene", "Enthusiastic"]
-word_arr_agrgb = ["Altruism", "Understanding", "Goodwill", "Compassion", "Cooperativeness", "Resilience", "emphatic"]
-word_arr_nrcm = ["fear", "Nervousness", "tension", "Mourning", "Uncertainty", "Embarrassment", "Worries"]
-
-# Combine word lists into one list
-words_arr = [word_arr_openess, word_arr_concs, word_arr_extrv, word_arr_agrgb, word_arr_nrcm]
-
-def score_calc(score_arr):
-    """
-    Calculate the average of the scores.
-
-    Parameters:
-    - score_arr: Dictionary containing scores for each word.
-
-    Returns:
-    Average score.
-    """
-    avg_sum_arr = []
-    for val in score_arr.values():
-        if len(val) != 0:
-            avg_val = np.average(val)
-            avg_sum_arr.append(avg_val)
-    avg_score = np.average(avg_sum_arr)
-
-    return avg_score
-
-def score_coll(word_arr, score=0.5):
+def score_collector(word_arr):
     """
     Calculate the score for a word list.
 
@@ -68,22 +40,64 @@ def score_coll(word_arr, score=0.5):
     Returns:
     Score for the word list.
     """
+
     score_dict = {}
     for word in word_arr:
-        res = embeddings.search(word, 10)
-        score_arr = []
-        for item in res:
-            if item[1] > score:
-                score_arr.append(round(item[1], 2))
+        res = embeddings.search(word, len(data))
+        score_arr = np.array([item[1] for item in res])
+        score_dict[word] = np.mean(score_arr)
 
-        score_dict[word] = score_arr
+    return score_dict
+def read_keywords_from_file(file_path):
+    with open(file_path, 'r') as file:
+        lines = file.readlines()
 
-    return score_calc(score_dict)
+    keywords_dict = {}
+    current_key = None
 
-# Calculate the score for all personality traits
-score_arr_full = [round(score_coll(arr, 0.3), 2) for arr in words_arr]
-print(score_arr_full)
+    for line in lines:
+        line = line.strip()
+        if line.endswith(':'):
+            current_key = line[:-1]
+            keywords_dict[current_key] = []
+        elif current_key:
+            keywords_dict[current_key].extend(line.split(', '))
 
+    return {key: np.array(value) for key, value in keywords_dict.items()}
+
+# Reading keywords from the file
+file_path = 'keywords.txt'
+keywords = read_keywords_from_file(file_path)
+print(keywords)
+
+big_5_characteristics = ["openness", "extraversion", "neuroticism","consciousness", "agreeableness"]
+
+def score_low_high(characteristic, dict1, function):
+    score_100_word = f"{characteristic}_100"
+    score_0_word = f"{characteristic}_0"
+
+    score_100 = function(dict1[score_100_word])
+    score_0 = function(dict1[score_0_word])
+
+    return score_100, score_0
+
+a, b = score_low_high(big_5_characteristics[0], keywords, score_collector)
+
+print(list(a.values()))
+
+
+def score_calculation(score_100: dict, score_0: dict):
+    mean_100 = np.mean(list(score_100.values()))
+    mean_0 = np.mean(list(score_0.values()))
+
+    return mean_100, mean_0
+
+def final_score(a, b):
+    return (a-b+1)/2
+
+print(score_calculation(a, b))
+
+print(final_score(*score_calculation(a, b)))
 
 
 

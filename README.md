@@ -10,14 +10,20 @@ Analyzing texts and generate big 5 scores trough answers of txtai LLM
 - Kontexte und Antworten generieren (done)
 - Metriken ausdenken, um die Performance von den Modellen zu vergleichen
 
-
-## Metriken
+## Brainstorming_score_accuracy_improvement and measurement
+- exclude ambivalent scores (both scores are small or high)
+- weighting of sentences - non linear layer (implement softmax function)
+- test different and more keywords
+- scattering?
+- runtime of single response
+- runtime of several responses
 - response precision 
 - response accuracy 
-- speed of single response
-- speed of several responses
+- score selection depending on videos
 
-
+## todo 
+- look for unambigous videos and define scores
+- clean code + comment 
 
 ## Models to test
 source: https://huggingface.co/models?pipeline_tag=question-answering&sort=downloads
