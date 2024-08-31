@@ -1,14 +1,34 @@
 # Big_5_Analyzer
 Analyzing texts and generate big 5 scores trough answers of txtai LLM
 
+**General idea of how to proceed (31.08.2024):** 
+Since, we are no experts in psychology or computer science, we should shift the focus from backend to 
+the front end and expand functions and design. After a first good blueprint, we can 
+start looking for money or experts to improve backend. 
 
-## ToDo
-- find about five models than can be used with Python (done)
-- make a sample of questions (done)
-- test the models
-- make a benchmark test with the models 
-- Kontexte und Antworten generieren (done)
-- Metriken ausdenken, um die Performance von den Modellen zu vergleichen
+## To Do
+
+- Write a how to start document  
+- implement further functional ideas to frontend
+- make front end usable for "people"
+- improve front end design
+
+[//]: # (- find about five models than can be used with Python &#40;done&#41;)
+
+[//]: # (- make a sample of questions &#40;done&#41;)
+
+[//]: # (- test the models)
+
+[//]: # (- make a benchmark test with the models )
+
+[//]: # (- Kontexte und Antworten generieren &#40;done&#41;)
+
+[//]: # (- Metriken ausdenken, um die Performance von den Modellen zu vergleichen)
+
+[//]: # (- look for unambigous videos and define scores)
+
+[//]: # (- clean code + comment)
+
 
 ## Brainstorming_score_accuracy_improvement and measurement
 - exclude ambivalent scores (both scores are small or high)
@@ -21,9 +41,8 @@ Analyzing texts and generate big 5 scores trough answers of txtai LLM
 - response accuracy 
 - score selection depending on videos
 
-## todo 
-- look for unambigous videos and define scores
-- clean code + comment 
+
+
 
 ## Models to test
 source: https://huggingface.co/models?pipeline_tag=question-answering&sort=downloads
