@@ -1,0 +1,24 @@
+conscientiousness:
+	- https://www.youtube.com/watch?v=tlFGOSEI_lo (organized)
+	- https://www.youtube.com/watch?v=0btaoJyVMTo (careless)
+
+
+extraversion:
+	- 
+	- 
+
+
+agreeableness:
+	-
+	-
+
+
+neuroticism:
+	-
+	-
+
+
+
+openness to experience:
+	-
+	-
